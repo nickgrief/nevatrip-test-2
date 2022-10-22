@@ -1,3 +1,4 @@
+import React from 'react';
 import { createFactory, useMemo, useState } from 'react';
 import { v4 as ukey } from 'uuid';
 
@@ -46,11 +47,7 @@ const Image: React.FC<{ src: string; markStyle: string; markText: string }> = ({
 const Time: React.FC<{ time: number }> = ({ time }) => {
     return (
         <div className='flex gap-2 text-xs text-[#9E9E9E]'>
-            <img
-                className='w-4'
-                src='/src/assets/icons/clock.svg'
-                alt='Clock Icon'
-            />
+            <img className='w-4' src='./icons/clock.svg' alt='Clock Icon' />
             <p>{time} часа</p>
         </div>
     );
@@ -135,7 +132,7 @@ const Schedule: React.FC<{ raceTimes: string[] }> = ({ raceTimes }) => {
         >
             <img
                 className='w-4'
-                src='/src/assets/icons/checkmark.svg'
+                src='./icons/checkmark.svg'
                 alt='Check Mark Icon'
             />
             <p className='min-w-fit'>Ближайший рейс сегодня</p>
@@ -166,10 +163,7 @@ const List: React.FC<{ bulletPoints: string[]; races: string[] }> = ({
             {bulletPoints.map((point) => {
                 return (
                     <li key={ukey()} className='flex gap-4'>
-                        <img
-                            src='/src/assets/icons/checkmark.svg'
-                            alt='Check Mark Icon'
-                        />
+                        <img src='./icons/checkmark.svg' alt='Check Mark Icon' />
                         <p>{point}</p>
                     </li>
                 );
@@ -190,7 +184,7 @@ const Price: React.FC<{ priceMain: number; priceSecond: string }> = ({
                     <div className='text-3xl'>{priceMain}</div>
                     <img
                         className='w-[19px] h-[21px]'
-                        src='/src/assets/icons/ruble.png'
+                        src='./icons/ruble.png'
                         alt='Ruble Icon'
                     />
                 </div>
@@ -253,7 +247,7 @@ let data: CardData[] = [
         races: ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00'],
         priceMain: 2000,
         priceSecond: '2500р на месте',
-        image: '/src/assets/images/piter.png',
+        image: './images/piter.png',
         markStyle: 'orange',
         markText: 'НОВИНКА',
     },
@@ -268,7 +262,7 @@ let data: CardData[] = [
         races: ['08:00', '11:00', '12:00'],
         priceMain: 900,
         priceSecond: '1200 р на причале',
-        image: '/src/assets/images/bridge.png',
+        image: './images/bridge.png',
         markStyle: 'violet',
         markText: 'КРУГЛЫЙ ГОД',
     },
@@ -282,7 +276,7 @@ let data: CardData[] = [
         races: ['10:00', '10:30', '11:00', '11:30'],
         priceMain: 500,
         priceSecond: '',
-        image: '/src/assets/images/church.png',
+        image: './images/church.png',
         markStyle: 'blue',
         markText: 'НОВИНКА',
     },
@@ -297,7 +291,7 @@ let data: CardData[] = [
         races: ['08:00', '11:00', '12:00', '12:30', '14:00', '18:00'],
         priceMain: 3000,
         priceSecond: '',
-        image: '/src/assets/images/piano.png',
+        image: './images/piano.png',
         markStyle: 'orange',
         markText: '',
     },
